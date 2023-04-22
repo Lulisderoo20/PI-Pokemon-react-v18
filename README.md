@@ -4,12 +4,15 @@
 
 ## **📌 OBJETIVOS**
 
--  Construir una Single Page Application utlizando las tecnologías: **React**, **Redux**, **Node**, **Express** y **Sequelize**.
--  Poner en práctica recursos básicos de estilos y diseño (UX : UI).
--  Afirmar y conectar los conceptos aprendidos en la carrera.
--  Aprender mejores prácticas.
--  Aprender y practicar el workflow de GIT.
--  Utilizar y practicar testing.
+-  Construir una Single Page Application utlizando las tecnologías: **React**, **Redux**, **Node**, **Express** y **Sequelize**. //single page app: se carga todo en una pagina pero se va actualizando parcialmente.
+
+beneficios: interaccion mas rapida. Las acciones del usuario, como hacer clic en un botón, no requieren cargar una nueva página.
+Las SPA se construyen con tecnologías como Angular, React o Vue.js, lo que hace que el desarrollo de la aplicación sea más fácil y rápido. Además, el código es más modular y reutilizable (mas facilidad de desarrollo)
+-  Poner en práctica recursos básicos de estilos y diseño (UX : UI). // CAGUÉ XD
+-  Afirmar y conectar los conceptos aprendidos en la carrera. // TMB CAGUE JAJAJA XD
+-  Aprender mejores prácticas.  // ONDA
+-  Aprender y practicar el workflow de GIT. // MINTERESA
+-  Utilizar y practicar testing. //ALGO INTERESANTE
 
 <br />
 

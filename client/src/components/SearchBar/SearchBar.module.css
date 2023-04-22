@@ -1,0 +1,51 @@
+div.centralize {
+	width: 210px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div.inputBlock {
+	position: relative;
+}
+div.inputBlock input {
+	font-weight: 500;
+	font-size: 1rem;
+	color: #000;
+	width: 200px;
+	height: 10px;
+	padding: 15px 15px;
+	border-radius: 1rem;
+	border: 0.01rem solid  #000;
+	outline:none;
+}
+div.inputBlock span.placeholder {
+	height: 45px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+	position: absolute;
+	margin: 12px 0;
+	padding: 0 5px;
+	display: flex;
+	align-items: center;
+	top: -12px;
+	left: 17px;
+	transition: all 0.2s;
+	transform-origin: 0% 0%;
+	background: none;
+	pointer-events: none;
+}
+div.inputBlock input:valid + span.placeholder,
+div.inputBlock input:focus + span.placeholder {
+transform: scale(0.8) translateY(-30px);
+background: #fff;
+}
+div.inputBlock input:focus{
+color: #f0c305;
+border-color: #f0c305;
+}
+div.inputBlock input:focus + span.placeholder {
+color: #f0c305;
+}

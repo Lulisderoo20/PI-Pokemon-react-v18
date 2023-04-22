@@ -1,0 +1,62 @@
+body{
+    background-color: #191a1d;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.title{
+    cursor: pointer;
+}
+
+.button {
+    height: 45px;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #f0c305;
+    box-shadow: 0px 15px 20px rgb(231, 196, 37);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.loadingPokemons{
+    width: 25%;
+    height: 25%;
+}

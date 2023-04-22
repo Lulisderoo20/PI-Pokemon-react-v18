@@ -1,0 +1,170 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+
+.statsAndTypes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 20px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.types{
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.typesOrder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* Buttons */
+
+.button {
+    height: 45px;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #f0c305;
+    box-shadow: 0px 15px 20px rgb(231, 196, 37);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+/* input creates */
+
+div.centralize {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div.inputBlock {
+	position: relative;
+}
+div.inputBlock input {
+	font-weight: 500;
+	color: #adadad;
+	width: 250px;
+	height: 1px;
+	padding: 15px 15px;
+	border-radius: 1rem;
+	border: 0.01rem solid  #adadad;
+}
+div.inputBlock span.placeholder {
+	position: absolute;
+	margin: 5px 0;
+	padding: 0 5px;
+	color:  #adadad;
+	display: flex;
+	align-items: center;
+	top: 0;
+	left: 17px;
+	transition: all 0.2s;
+	transform-origin: 0% 0%;
+    pointer-events: none;
+}
+div.inputBlock input:valid + span.placeholder,
+div.inputBlock input:focus + span.placeholder {
+transform: scale(0.8) translateY(-30px);
+background: #fff;
+}
+div.inputBlock input:focus{
+color: #f0c305;
+border-color: #f0c305;
+}
+div.inputBlock input:focus + span.placeholder {
+color: #f0c305;
+}
+
+/* Types buttons */
+
+.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+ul{
+    margin-block-start: 20px;
+    margin-block-end: 1px;
+    padding-inline-start: 1px;
+}
+ul.ksCboxtags li{
+    display: inline;
+}
+ul.ksCboxtags li label{
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #adadad;
+    border-radius: 25px;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+ul.ksCboxtags li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+ul.ksCboxtags li label::before {
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    transition: transform .3s ease-in-out;
+}
+ul.ksCboxtags li input[type="checkbox"]:checked + label::before {
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+}
+ul.ksCboxtags li input[type="checkbox"]:checked + label {
+    border: 2px solid #f0c305;
+    background-color: #f0c305;
+    color: #fff;
+    transition: all .2s;
+}
+ul.ksCboxtags li input[type="checkbox"] {
+    display: absolute;
+}
+ul.ksCboxtags li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
