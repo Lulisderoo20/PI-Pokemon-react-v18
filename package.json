@@ -1,19 +1,6 @@
 {
-  "name": "pi-pokemon-main",
-  "version": "1.0.0",
-  "description": "![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lulisderoo20/PI-Pokemon.git"
-  },
-  "author": "Luchi Lisdero",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lulisderoo20/PI-Pokemon/issues"
-  },
-  "homepage": "https://github.com/Lulisderoo20/PI-Pokemon#readme"
+  "dependencies": {
+    "react-dom": "^18.1.0",
+    "react-router": "^6.3.0"
+  }
 }

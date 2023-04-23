@@ -3,6 +3,6 @@ const { getTypes } = require('../Controller/Type.Controller');
 
 const router = Router();
 
-router.get('/types', getTypes);
+router.get('/', getTypes);
 
 module.exports = router;

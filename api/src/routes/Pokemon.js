@@ -3,9 +3,9 @@ const { getPokemons, createPokemon, getPokemonById } = require('../Controller/Po
 
 const router = Router();
 
-router.get('/pokemons', getPokemons);
-router.get('/pokemons/:id', getPokemonById);
-router.post('/pokemons', createPokemon);
+router.get('/', getPokemons);//query {name} ?name=pikachu
+router.get('/:id', getPokemonById);//params
+router.post('/', createPokemon);//query {name}
 
 module.exports = router;
 
