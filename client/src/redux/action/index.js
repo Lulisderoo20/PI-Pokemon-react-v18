@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function getPokemons(){
     return async function(dispatch){
-        let json = await axios.get('https://pokemon-pi-henry.herokuapp.com/pokemons');
+        let json = await axios.get(`http://localhost:3003/pokemons`);
         return dispatch({
             type: 'GET_POKEMONS',
             payload: json.data
@@ -12,7 +12,7 @@ export function getPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        let json = await axios.get('https://pokemon-pi-henry.herokuapp.com/types');
+        let json = await axios.get(`http://localhost:3003/types`);
         return dispatch({
             type: 'GET_TYPES',
             payload: json.data
@@ -20,10 +20,12 @@ export function getTypes(){
     };
 };
 
+
+
 export function getNamePokemon(name){
     return async function(dispatch){
         try{
-            let json = await axios.get('https://pokemon-pi-henry.herokuapp.com/pokemons?name=' + name);
+            let json = await axios.get(`http://localhost:3003/pokemons?name=` + name);
             return dispatch({
                 type: 'GET_BY_NAME',
                 payload: json.data
@@ -37,7 +39,7 @@ export function getNamePokemon(name){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            let json = await axios.get('https://pokemon-pi-henry.herokuapp.com/pokemons/' + id);
+            let json = await axios.get('http://localhost:3003/pokemons/' + id);
             return dispatch({
                 type: 'GET_DETAIL',
                 payload: json.data
@@ -71,9 +73,12 @@ export function filterByState(payload){
 
 export function createPokemon(payload){
     return async function(dispatch){
-        await axios.post('https://pokemon-pi-henry.herokuapp.com/pokemons', payload);
+        var json=await axios.post(`http://localhost:3003/pokemons`, payload);
+        return json
     };
 };
+
+
 
 export function cleanMyStore(){
     return{

@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { Type } = require('../db/db');
+const { Type } = require('../db');
 
 const getTypes = async (req, res) => {
     try{
@@ -22,3 +22,8 @@ const getTypes = async (req, res) => {
 module.exports = {
     getTypes,
 };
+
+
+
+
+  

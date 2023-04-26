@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { Pokemon, Type } = require('../db/db');
+const { Pokemon, Type } = require('../db');
 
 const pokeApi = async (name) => {
     try{
@@ -70,6 +70,7 @@ const pokeDb = async (name) => {
 };
 
 const getPokemons = async (req, res) => {
+    
     try{
         const { name } = req.query;
         const pokemonsApi = await pokeApi(name);
@@ -80,7 +81,11 @@ const getPokemons = async (req, res) => {
         }else if(!pokemonsDb && name){
             pokemonDbAndApi = pokemonsApi;
         }else{
-            pokemonDbAndApi = pokemonsDb.concat(pokemonsApi);
+            if (Array.isArray(pokemonsDb) && pokemonsDb.length > 0) {
+                pokemonDbAndApi = pokemonsDb.concat(pokemonsApi);
+            } else {
+                pokemonDbAndApi = pokemonsApi;
+            }
         };
         res.send(pokemonDbAndApi);
     }catch(error){

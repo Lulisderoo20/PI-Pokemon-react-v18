@@ -10,6 +10,7 @@ export default function Detail(){
     const dispatch = useDispatch();
     const params = useParams();
 
+    
     useEffect(() => {
         dispatch(getDetail(params.id));
     }, [dispatch, params.id]);

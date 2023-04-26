@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { filterByType, getPokemons, getTypes, orderByName, filterByState } from "../../redux/action";
-import Card from "../Card/Card";
-import Paginated from "../Paginated/Paginated";
-import SearchBar from "../SearchBar/SearchBar";
+import Card from "../Card/Card";//2
+import Paginated from "../Paginated/Paginated";//3
+import SearchBar from "../SearchBar/SearchBar";//1
 import styles from "./Home.module.css";
 import image from "../../assets/loading.gif"
 
