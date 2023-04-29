@@ -23,19 +23,21 @@ export default function Home(){
         setCurrentPage(pageNumber);
     };
 
-    useEffect(() => {
-        dispatch(getPokemons());
-        dispatch(getTypes());
-    }, []);
-
-    useEffect(() => {
-        setCurrentPage(1);
-    }, [allPokemons]);
-
-    const rechargePokemon = () => {
+   const rechargePokemon = () => {
         dispatch(getPokemons());
         setCurrentPage(1);
     };
+
+    // useEffect(() => {
+    //     setCurrentPage(1);
+    // }, [setCurrentPage]);
+
+   
+    useEffect(() => {
+       rechargePokemon();
+    }, []);
+
+
 
     const handleSort = (e) =>{
             e.preventDefault();

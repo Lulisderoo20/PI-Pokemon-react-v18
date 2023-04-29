@@ -16,12 +16,15 @@ export default function SearchBar(){
     const handleSubmit = (e) => {
         e.preventDefault()
         if(name){
+            console.log(name);
             dispatch(getNamePokemon(name));
         }else{
             alert('Enter a valid name');
         };
     };
 
+
+    
     return (
         <div className={styles.centralize}>
             <form onSubmit={(e) => {handleSubmit(e)}}>

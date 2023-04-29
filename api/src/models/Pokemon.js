@@ -42,11 +42,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    createInDb: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: 'true',
-    },
+    // createInDb: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   defaultValue: 'true',
+    // },
     description: {
       type: DataTypes.TEXT,
       allowNull: true,

@@ -2,11 +2,16 @@ import axios from 'axios';
 
 export function getPokemons(){
     return async function(dispatch){
-        let json = await axios.get(`http://localhost:3003/pokemons`);
+    try {
+        let response = await axios.get(`http://localhost:3003/pokemons`);
         return dispatch({
             type: 'GET_POKEMONS',
-            payload: json.data
+            payload: response.data//response objeto {[]}, data []
         });
+    } catch (error) {
+        alert('No pude traer pokemons')
+    }
+     
     };
 };
 
@@ -25,7 +30,7 @@ export function getTypes(){
 export function getNamePokemon(name){
     return async function(dispatch){
         try{
-            let json = await axios.get(`http://localhost:3003/pokemons?name=` + name);
+            let json = await axios.get(`http://localhost:3003/pokemons?name=${name}`);
             return dispatch({
                 type: 'GET_BY_NAME',
                 payload: json.data
@@ -71,13 +76,19 @@ export function filterByState(payload){
     };
 };
 
-export function createPokemon(payload){
+
+export function createPokemon(pokenuevo){
     return async function(dispatch){
-        var json=await axios.post(`http://localhost:3003/pokemons`, payload);
-        return json
+        try {
+            var response = await axios.post(`http://localhost:3003/pokemons`, pokenuevo);//pokenuevo seria el req.body de mi controller
+            return console.log('pokemon created por redux')//dispatch({type: 'ADD_POKEMON', payload: response.data}); //en realidad no necesito este type porque mis pokemons se renderizan directamente desde mi base de datos.    
+            //porq no m funciona este console.log()?
+        } catch (error) {
+            alert('no creo pokemon porq no quiero')
+        }
+       
     };
 };
-
 
 
 export function cleanMyStore(){

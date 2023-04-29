@@ -21,7 +21,7 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ alter: true }).then(() => {//force true las recrea y borra los registros
   server.listen(3003, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
