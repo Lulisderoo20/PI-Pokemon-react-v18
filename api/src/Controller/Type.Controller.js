@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios');  //estas serian como tus dietas 
 const { Type } = require('../db');
 
 const getTypes = async (req, res) => {
