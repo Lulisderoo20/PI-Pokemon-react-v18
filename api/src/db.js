@@ -1,8 +1,11 @@
+//aca comente todo porq en el principio no sabia nada de que hacia cada cosa xD
+
 require("dotenv").config();
+const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+
 
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
@@ -14,6 +17,7 @@ const sequelize = new Sequelize(
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
 );
+
 const basename = path.basename(__filename); //path tiene metodos, basename devuelve el ultimo segmento de una ruta, filename devuelve toda la ruta. del directorio incluyendo el archivo a diferencia de __dirname que solo devuelve el directorio, (la ruta sin el archivo)
 
 //esto tiene que definirse vacio.
@@ -53,6 +57,7 @@ const { Pokemon, Type } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
+//relacion muchos a muchos, y definciion de tabla intermedia con nombre pokemons_type
 Pokemon.belongsToMany(Type, {through: 'pokemons_type'});
 Type.belongsToMany(Pokemon, {through: 'pokemons_type'});
 

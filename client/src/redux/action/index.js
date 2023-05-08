@@ -31,12 +31,17 @@ export function getNamePokemon(name){
     return async function(dispatch){
         try{
             let json = await axios.get(`http://localhost:3003/pokemons?name=${name}`);
+            console.log(json.data);
+            let arr= []; //tiene q estar en un array
+            arr.push(json.data)
+            console.log(arr)
             return dispatch({
                 type: 'GET_BY_NAME',
-                payload: json.data
+                payload: arr 
             });
         }catch{
             console.log('Pokemon Not Found');
+            alert('Pokemon Not Found');
         };
     };
 };

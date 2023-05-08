@@ -15,12 +15,15 @@ function rootReducer(state = initialState, action) {
       };
     case "GET_BY_NAME":
       if (!action.payload.length) {
+        console.log('Pokemon not Found');
         return alert("Pokemon not Found");
       }
       return {
         ...state,
         pokemon: action.payload,
       };
+      
+
     case "GET_TYPES":
       return {
         ...state,
@@ -55,6 +58,7 @@ function rootReducer(state = initialState, action) {
         ...state,
         pokemon: stateFiltered,
       };
+      
     case "ORDER_POKEMONS":
       if (action.payload === "asc") {
         state.pokemon.sort(function (a, b) {

@@ -73,15 +73,18 @@ const pokeDb = async (name) => {
         },
       },
     });
+    
     if (name) {
-      return pokemon.filter((e) =>
-        e.name.toLowerCase().includes(name.toLowerCase())//deberia ser igual en vez de includes
+      const pokdb= pokemon.filter((e) =>
+        e.name.toLowerCase().includes(name.toLowerCase())
       );
+      res.status(200).json(pokdb); //Y devuelvo lo filtrado
     } else {
-      return pokemon;
+      res.status(200).json(pokemon);
     }
   } catch {
-    console.log("Pokemon not found");
+    // res.status(500).json("Pokemon not found");//c esto no encuentra los pokemons
+    console.log("Pokemon not found");//nunca va a andar por los otros catch en mis actions creo
   }
 };
 
