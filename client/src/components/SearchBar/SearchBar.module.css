@@ -3,6 +3,8 @@ div.centralize {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #252525;
+	
 }
 div.inputBlock {
 	position: relative;
@@ -10,13 +12,14 @@ div.inputBlock {
 div.inputBlock input {
 	font-weight: 500;
 	font-size: 1rem;
-	color: #000;
+	color: #f0c305;
 	width: 200px;
 	height: 10px;
 	padding: 15px 15px;
 	border-radius: 1rem;
-	border: 0.01rem solid  #000;
+	border: 0.01rem solid  #f0c305;
 	outline:none;
+	background-color: #252525;
 }
 div.inputBlock span.placeholder {
 	height: 45px;
@@ -24,7 +27,7 @@ div.inputBlock span.placeholder {
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    color: #000;
+    color: #f0c305;
 	position: absolute;
 	margin: 12px 0;
 	padding: 0 5px;
@@ -40,12 +43,16 @@ div.inputBlock span.placeholder {
 div.inputBlock input:valid + span.placeholder,
 div.inputBlock input:focus + span.placeholder {
 transform: scale(0.8) translateY(-30px);
-background: #fff;
+background: #252525;
+color:#fff
 }
 div.inputBlock input:focus{
 color: #f0c305;
 border-color: #f0c305;
+background: #252525;
 }
 div.inputBlock input:focus + span.placeholder {
 color: #f0c305;
+background: #252525;
 }
+

@@ -9,7 +9,7 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.get('/pokemons', getPokemons);//query {name} ?name=pikachu
-router.get('/pokemons:id', getPokemonById);//params
+router.get('/pokemons/:id', getPokemonById);//params
 router.post(`/pokemons`, createPokemon);//query {name}
 router.use('/types', getTypes);
 

@@ -20,7 +20,7 @@ export default function Detail(){
     };
 
 
-    const pokemonDetail = useSelector((state) => state.pokemonDetail.length && state.pokemonDetail[0]);
+    const pokemonDetail = useSelector((state) => state.pokemonDetail.length && state.pokemonDetail[0]);//operador logico/condicional AND , evaluacion de circuito corto 
 
     if(pokemonDetail){
     return (

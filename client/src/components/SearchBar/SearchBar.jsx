@@ -25,30 +25,6 @@ export default function SearchBar() {
     }
   };
 
-//   return (
-//     <div className={styles.centralize}>
-//       <form
-//         onSubmit={(e) => {
-//           handleSubmit(e);
-//         }}
-//       >
-//         <div className={styles.inputBlock}>
-//           <input
-//             type="text"
-//             name="input-text"
-//             id="input-text"
-//             required
-//             spellCheck="false"
-//             onChange={(e) => {
-//               hanldeInputChange(e);
-//             }}
-//           />
-//           <span className={styles.placeholder}>Search</span>
-//         </div>
-//       </form>
-//     </div>
-//   );
-
   return (
     <div className={styles.centralize}>
       <form
@@ -56,13 +32,10 @@ export default function SearchBar() {
           handleSubmit(e);
         }}
       >
-       
+        <div className={styles.inputBlock}>
           <input
-            className={styles.inputBlock}
-            placeholder="Buscar..." 
             type="text"
-            // name="input-text"
-            value={name} 
+            name="input-text"
             id="input-text"
             required
             spellCheck="false"
@@ -70,11 +43,38 @@ export default function SearchBar() {
               hanldeInputChange(e);
             }}
           />
-           <button type="submit" className={styles.placeholder} value={name}>Buscar</button>   
-          {/* <span className={styles.placeholder}>Search</span> */}
-        
+          <span className={styles.placeholder}>Search</span>
+        </div>
       </form>
     </div>
   );
+
+  // return (
+  //   <div className={styles.centralize}>
+  //     <form
+  //       onSubmit={(e) => {
+  //         handleSubmit(e);
+  //       }}
+  //     >
+       
+  //         <input
+  //           className={styles.inputBlock}
+  //           placeholder="Buscar..." 
+  //           type="text"
+  //           // name="input-text"
+  //           value={name} 
+  //           id="input-text"
+  //           required
+  //           spellCheck="false"
+  //           onChange={(e) => {
+  //             hanldeInputChange(e);
+  //           }}
+  //         />
+  //          <button type="submit" className={styles.placeholder} value={name}>Buscar</button>   
+  //         {/* <span className={styles.placeholder}>Search</span> */}
+        
+  //     </form>
+  //   </div>
+  // );
 
 }

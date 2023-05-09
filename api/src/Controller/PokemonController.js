@@ -92,7 +92,7 @@ const getPokemons = async (req, res) => {
   try{
       const { name } = req.query;
       const pokemonsApi = await pokeApi(name);
-      console.log("sebas", pokemonsApi);
+     
       const pokemonsDb = await pokeDb(name);
       let pokemonDbAndApi = [];
       if(!pokemonsApi && name){
