@@ -55,7 +55,7 @@ const pokeApi = async (name) => {
           }),
         };
       });
-      return promiseRequest;//retorna el array de pokemons de la api
+      return promiseRequest;
     }
   } catch (error) {
     console.log(error);
@@ -68,19 +68,19 @@ const pokeDb = async (name) => {
       include: {
         model: Type,
         attributes: ["name"],
-        through: {
-          attributes: [],
-        },
+        // through: {
+        //   attributes: [],
+        // },
       },
     });
+    console.log(pokemon);
     if (name) {
       const pokdb= pokemon.filter((e) =>
         e.name.toLowerCase().includes(name.toLowerCase())
       );
-    return pokdb;
+      res.status(200).json(pokdb); //Y devuelvo lo filtrado
     } else {
-      return pokemon
-    
+      res.status(200).json(pokemon);
     }
   } catch {
     // res.status(500).json("Pokemon not found");//c esto no encuentra los pokemons
@@ -89,30 +89,37 @@ const pokeDb = async (name) => {
 };
 
 const getPokemons = async (req, res) => {
-  try{
-      const { name } = req.query;
-      const pokemonsApi = await pokeApi(name);
-      console.log("sebas", pokemonsApi);
-      const pokemonsDb = await pokeDb(name);
-      let pokemonDbAndApi = [];
-      if(!pokemonsApi && name){
-          pokemonDbAndApi = pokemonsDb;
-      }else if(!pokemonsDb && name){
-          pokemonDbAndApi = pokemonsApi;
-      }else{
-          if (Array.isArray(pokemonsDb) && pokemonsDb.length > 0) {
-              pokemonDbAndApi = pokemonsDb.concat(pokemonsApi);
-          } else {
-              pokemonDbAndApi = pokemonsApi;
-          }
-      };
-      res.send(pokemonDbAndApi);
-  }catch(error){
-      console.log(error);
-  };
+  try {
+    const { name } = req.query;
+
+
+if(name){
+  const pokemonsApi = await pokeApi(name);
+  const pokemonDb = await pokeDb(name);
+  let pokemonDbAndApi = [];
+}
+
+    
+    
+    const pokemonsDb = await pokeDb();
+    
+    if (!pokemonsApi && name) {
+      pokemonDbAndApi = pokemonsDb;//
+    } else if (!pokemonsDb && name) {
+      pokemonDbAndApi = pokemonsApi;
+    } else {
+      if (Array.isArray(pokemonsDb) && pokemonsDb.length > 0) {
+        pokemonDbAndApi = pokemonsDb.concat(pokemonsApi);
+      } else {
+        pokemonDbAndApi = pokemonsApi;
+      }
+    }
+    console.log(pokemonDbAndApi);
+    res.json(pokemonDbAndApi);
+  } catch (error) {
+    console.log(error);
+  }
 };
-
-
 
 const getPokemonByName =async (req, res) => {};
 

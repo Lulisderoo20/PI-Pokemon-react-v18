@@ -4,6 +4,9 @@ export function getPokemons(){
     return async function(dispatch){
     try {
         let response = await axios.get(`http://localhost:3003/pokemons`);
+        // let arr= []; //tiene q estar en un array
+        // arr.push(response.data)
+        console.log(response.data);
         return dispatch({
             type: 'GET_POKEMONS',
             payload: response.data//response objeto {[]}, data []
@@ -17,10 +20,10 @@ export function getPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        let json = await axios.get(`http://localhost:3003/types`);
+        let response = await axios.get(`http://localhost:3003/types`);
         return dispatch({
             type: 'GET_TYPES',
-            payload: json.data
+            payload: response.data
         });
     };
 };
@@ -30,11 +33,11 @@ export function getTypes(){
 export function getNamePokemon(name){
     return async function(dispatch){
         try{
-            let json = await axios.get(`http://localhost:3003/pokemons?name=${name}`);
-            console.log(json.data);
+            let response = await axios.get(`http://localhost:3003/pokemons?name=${name}`);
+            // console.log(response.data);
             let arr= []; //tiene q estar en un array
-            arr.push(json.data)
-            console.log(arr)
+            arr.push(response.data)
+            // console.log(arr)
             return dispatch({
                 type: 'GET_BY_NAME',
                 payload: arr 
