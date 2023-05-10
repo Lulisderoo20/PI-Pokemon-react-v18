@@ -1,71 +1,113 @@
 .img {
-    width: 150px;
-    height: 148px;
-    border-radius: 10px;
-    position: relative;
-    top: 0px;
-}
-.type{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    top: -100px;
+  width: 150px;
+  height: 148px;
+  border-radius: 10px;
+  position: relative;
+  top: 0px;
+  animation: appear 1s ease-in-out ;
+  margin-bottom: 4%;
+  margin-left: 2.8%;
 }
 
+
+
+
+.img:hover {
+  background-color: #1e1e20;
+  box-shadow: 0px 15px 20px #191a1d;
+  color: #f0c305;
+  transform: translateY(-9px);
+}
+
+.img:active{animation: acercar 1s linear;}
+
+@keyframes acercar {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+.type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -10px;
+  margin-bottom: 3%;
+ 
+}
+
+ .type:hover{
+  transform: scaleX(1.25);
+}
+/*
+@keyframes acercarType {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+} */
+
 .name {
-    overflow: hidden;
-    padding: 1.3em 1em;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #fff;
-    background-color: #1f1c1c;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+  overflow: hidden;
+  padding: 1.3em 1em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #d39231;
+  background-color: #1f1c1c;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
 .name:hover {
-    background-color: #1e1e20;
-    box-shadow: 0px 15px 20px #191a1d;
-    color: #fff;
-    transform: translateY(-7px);
+  background-color: #1e1e20;
+  box-shadow: 0px 15px 20px #191a1d;
+  color: #f0c305;
+  transform: translateY(-10px);
 }
 
 .name:active {
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .card {
-    padding: 1.3em 3em;
-    font-size: 12px;
-    height: 250px;
-    width: 160px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #fff;
-    background-color: #181818;;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+  display: flex;
+  align-items: center;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  height: 250px;
+  width: 160px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #edf04f;
+  background-color: #181818;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
 .card:hover {
-    background-color: #f0c305;
-    box-shadow: 0px 15px 20px rgb(231, 196, 37);
-    color: #fff;
-    transform: translateY(-7px);
+  background-color: #f0c305;
+  box-shadow: 0px 15px 20px rgb(231, 196, 37);
+  color: #000;
+  transform: translateY(-7px);
 }
 
 .card:active {
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }

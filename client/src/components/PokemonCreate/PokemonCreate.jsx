@@ -5,11 +5,6 @@ import { validate } from "./validator.js";
 import { createPokemon } from "../../redux/action";
 import styles from "./PokemonCreate.module.css";
 
-//TAREA
-//PASAR DE AXIOS A FETCH
-//HACER UN ESTADO DE LIMPIEZA DE REDUX. Y DEL BACK investigar, preguntar a martu
-//voy a investigar
-
 
 export default function PokemonCreate() {
   const dispatch = useDispatch();
@@ -88,10 +83,14 @@ export default function PokemonCreate() {
       setTypes([...types, e.target.value]);
       setInput({ ...input, types: [...types, e.target.value] });
     }
+
+
     // }else{
     //     let pos = types.indexOf(e.target.id);
     //     types.splice(pos, 1);
     // };
+
+    
   };
 
   return (

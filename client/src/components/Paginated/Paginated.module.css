@@ -6,12 +6,12 @@
 }
 
 .pagination {
-    padding: 1em 1em;
+    padding: 1em 1.5em;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    color: #fff;
+    color: #fae73e;
     background-color: #202329;
     border: none;
     border-radius: 80px;
@@ -19,6 +19,7 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    margin:9%
 }
 
 .pagination:hover {

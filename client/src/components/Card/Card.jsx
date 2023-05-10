@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Card({ name, images, type, id }){
     return(
-        <Link to={`/home/${id}`} className={styles.card} style={{textDecoration: 'none'}}>
-            <div>
+        <Link to={`/detail/${id}`} className={styles.card} style={{textDecoration: 'none'}}>
+            <div >
                 <h3 className={styles.name}>{name[0].toUpperCase() + name.slice(1)}</h3>
                 <div className={styles.type}>
                 {   type &&

@@ -34,18 +34,21 @@ function rootReducer(state = initialState, action) {
         ...state,
         pokemonDetail: action.payload,
       };
+
     case "FILTER_BY_TYPE":
+
       let allPokemonsType = state.pokemonFiltered;
       let typeFiltered =
         action.payload === "all"
           ? allPokemonsType
           : allPokemonsType.filter((e) => {
-              return e.types.some((d) => d.name === action.payload);
+              return e.types.some((d) => d.name === action.payload);//some() recorre los elementos del array y devuelve true si al menos un elemento cumple con la condición proporcionada en la función de callback. 
             });
       return {
         ...state,
         pokemon: typeFiltered,
       };
+
     case "FILTER_BY_STATE":
       let allPokemonsState = state.pokemonFiltered;
       let stateFiltered =

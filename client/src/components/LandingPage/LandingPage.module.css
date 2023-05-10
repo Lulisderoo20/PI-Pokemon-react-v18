@@ -1,43 +1,79 @@
+
+
+
 .Landing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    width: 100%;
-    background-color: #191a1d;
-    text-align: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+  width: 100%;
+  background-image: url("../../assets/giphy.gif");
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  
 }
 
-.Image{
-    height: 50%;
-    cursor: pointer;
+.Image {
+  height: 50%;
+  cursor: pointer;
+  animation: bounce 300ms alternate 6  cubic-bezier(0.2, 0.65, 0.6, 1) ;
+  margin-top: -25%;
+  margin-left: -3%;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-40px);
+  }
 }
 
 .button {
-    padding: 1.3em 3em;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #fff;
-    background-color: #202329;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #f0e111;
+  background-color: #304572;
+  /* border:#ffffff; */
+  border-radius: 45px;
+  box-shadow: 50px 8px 15px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  /* margin:1%; */
+  animation: cartel 1s 1;
+  animation-delay: 1s;
+  transform-origin: top center;
 }
 
 .button:hover {
-    background-color: #f0c305;
-    box-shadow: 0px 15px 20px rgb(231, 196, 37);
-    color: #fff;
-    transform: translateY(-7px);
+  background-color: #f0c305;
+  box-shadow: 0px 15px 20px rgb(231, 196, 37);
+  color: #ffffff;
+  transform: translateY(-7px);
 }
 
 .button:active {
-    transform: translateY(-1px);
+  transform: translateY(-10px);
+}
+
+@keyframes cartel{ 
+  20%{
+    transform: rotate(25deg)
+  }
+  40%{
+    transform: rotate(-15deg)
+  }
+  60%{
+    transform: rotate(15deg)
+  }
+  80%{
+    transform: rotate(-5deg)
+  }  
 }

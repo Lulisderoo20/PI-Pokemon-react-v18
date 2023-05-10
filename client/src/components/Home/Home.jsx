@@ -57,8 +57,14 @@ export default function Home(){
     return (
         <div className={styles.body}>
 
+{/* Nav */}
             <div className={styles.nav}>
-                <h1 className={styles.title}>POKEDEX</h1>
+
+            <Link className={styles.link} to='/'>
+            <h1 className={styles.title}>POKEDEX</h1>
+                </Link>
+
+              
 
                 <button onClick={rechargePokemon} className={styles.button}>Recharge</button>
 
@@ -89,17 +95,18 @@ export default function Home(){
 
             </div>
 
-
+{/* Paginated */}
             <Paginated
             pokemonPerPage={pokemonPerPage}
             allPokemons={allPokemons.length}
             paginated={paginated}
             />
 
+{/* Cards */}
         <div className={styles.cards}>
             {   currentPokemons?.map((e) => {
                 return (
-                    <Card name={e.name} type={e.types.slice(0, 2)} images={e.image} id={e.id} key={e.id} className={styles.cards}/>
+                    <Card name={e.name} type={e.types.slice(0, 2)} images={e.image} id={e.id} key={e.id} className={styles.carddd}/>
                 )
             })
             }

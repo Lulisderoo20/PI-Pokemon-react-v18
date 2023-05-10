@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
@@ -9,6 +9,7 @@ import styles from "./Detail.module.css"
 export default function Detail(){
     const dispatch = useDispatch();
     const params = useParams();
+    const [isCardDetailDos, setIsCardDetailDos] = useState(false);
 
     
     useEffect(() => {
@@ -19,6 +20,10 @@ export default function Detail(){
         dispatch(cleanMyStore())
     };
 
+    const handleClick = () => {
+        setIsCardDetailDos(!isCardDetailDos);
+      };
+      
 
     const pokemonDetail = useSelector((state) => state.pokemonDetail.length && state.pokemonDetail[0]);//operador logico/condicional AND , evaluacion de circuito corto 
 
@@ -32,8 +37,8 @@ export default function Detail(){
                 </Link>
             </div>
 
-            <div className={styles.cardDetail}>
-
+            <div className={isCardDetailDos ? styles.cardDetailDos : styles.cardDetail}>
+            <button className={styles.roundButton} onClick={handleClick}></button>
 
                 <div className={styles.imagePokemon}>
                     <img src={pokemonDetail.image} alt="Pokemon Image" style={{borderRadius: '10px',width: '250px', height: '250px'}}/>

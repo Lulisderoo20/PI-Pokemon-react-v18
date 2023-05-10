@@ -12,9 +12,20 @@ function App() {
     <Routes>
       <Route exact path='/' element={<LandingPage/>}/>
       <Route path='/home' element={<Home/>}/>
-      <Route path='/home/:id' element={<Detail/>}/>
+      <Route path='/detail/:id' element={<Detail/>}/>
       <Route path='/pokemon' element={<PokemonCreate/>}/>
     </Routes>
+    <div
+        style={{
+          padding: "4%",
+          
+          marginBottom: "1%",
+          marginTop: "3%",
+          color: "#f0c305"
+        }}
+      >Lucia Lisdero © Copyright Pigmaleon Studio . All rights reserved.
+      
+      </div>
     </div>
 
   );

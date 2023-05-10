@@ -5,8 +5,12 @@
 
 // export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 //ESTO DE ABAJO ES LO QUE ME DIO GUIDI
+
+
+
+
 import { applyMiddleware, legacy_createStore as createStore, compose } from "redux";
-import thunk from "redux-thunk";
+import thunk from "redux-thunk"; //para hacer tareas asincronicas
 import reducer from "../reducer/index";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
