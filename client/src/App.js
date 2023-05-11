@@ -4,9 +4,9 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Home from './components/Home/Home';
 import PokemonCreate from './components/PokemonCreate/PokemonCreate';
 import Detail from './components/Detail/Detail';
-import axios from "axios";
+// import axios from "axios";
 
- axios.defaults.baseURL = "https://api-pokemon-lruf.onrender.com";
+//  axios.defaults.baseURL = "https://api-pokemon-lruf.onrender.com";
 
 function App() {
   return (

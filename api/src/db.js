@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 //---comente esto para render---
-/*const sequelize = new Sequelize(
+const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
   {
     //opciones de configuracion
@@ -16,12 +16,12 @@ const path = require("path");
     //native -> viene en false por defecto en realidad. preguntar si me conviene ponerlo en true y si hay que configurar algo mas para q funcione y no me rompa nada.
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
-);*/
+);
 
-const sequelize = new Sequelize(DB_DEPLOY, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-});
+// const sequelize = new Sequelize(DB_DEPLOY, {
+//   logging: false, // set to console.log to see the raw SQL queries
+//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+// });
 
 
 const basename = path.basename(__filename); //path tiene metodos, basename devuelve el ultimo segmento de una ruta, filename devuelve toda la ruta. del directorio incluyendo el archivo a diferencia de __dirname que solo devuelve el directorio, (la ruta sin el archivo)

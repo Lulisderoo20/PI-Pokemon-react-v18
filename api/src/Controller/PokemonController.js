@@ -108,14 +108,14 @@ const getPokemons = async (req, res) => {
       };
       res.send(pokemonDbAndApi);
   }catch(error){
-    
-      res.status(400).send(error.message); //que pasa si no encuentro el pokemon
+    await getPokemons();
+    // await res.status(400).send(error.message); //que pasa si no encuentro el pokemon
   };
 };
 
 
 
-const getPokemonByName =async (req, res) => {};
+// const getPokemonByName =async (req, res) => {};
 
 
 const getPokemonById = async (req, res) => {
