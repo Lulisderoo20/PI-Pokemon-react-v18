@@ -5,6 +5,7 @@ import pokemonImage from "../../assets/logo.png";
 import { useDispatch } from "react-redux";
 import { getPokemons, getTypes } from "../../redux/action";
 import { useEffect } from "react";
+import yo from "../../assets/yo.png";
 
 export default function () {
   const dispatch = useDispatch();
@@ -20,12 +21,21 @@ navigate('/home')
   }, [dispatch]);
 
   return (
+    <div>
     <div className={styles.Landing}>
       <img src={pokemonImage} alt="imagen" className={styles.Image} />
       {/* <Link to="/home"> */}
         <button className={styles.button} onClick={toHome}>Login</button>
       {/* </Link> */}
-    </div>
+{/* <Link to="#about" className={styles.arrow}>⬇</Link> preguntar como se hace esto*/}
+
+    {/* </div><div id="about" className={styles.about}>
+      <img src={yo} alt="yo" className={yo}/>
+      <div>Soy Lucia Lisdero. Formo parte de un grupo de Dise</div>
+      </div> */}
+   
+      </div>
+      </div>
   );
 }
 

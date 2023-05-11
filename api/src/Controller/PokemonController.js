@@ -108,7 +108,8 @@ const getPokemons = async (req, res) => {
       };
       res.send(pokemonDbAndApi);
   }catch(error){
-      console.log(error);
+    
+      res.status(400).send(error.message); //que pasa si no encuentro el pokemon
   };
 };
 

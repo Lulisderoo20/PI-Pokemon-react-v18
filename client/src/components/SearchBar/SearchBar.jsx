@@ -34,10 +34,10 @@ export default function SearchBar() {
       >
         <div className={styles.inputBlock}>
           <input
+          value={name}
             type="text"
             name="input-text"
             id="input-text"
-            required
             spellCheck="false"
             onChange={(e) => {
               hanldeInputChange(e);
@@ -48,33 +48,4 @@ export default function SearchBar() {
       </form>
     </div>
   );
-
-  // return (
-  //   <div className={styles.centralize}>
-  //     <form
-  //       onSubmit={(e) => {
-  //         handleSubmit(e);
-  //       }}
-  //     >
-       
-  //         <input
-  //           className={styles.inputBlock}
-  //           placeholder="Buscar..." 
-  //           type="text"
-  //           // name="input-text"
-  //           value={name} 
-  //           id="input-text"
-  //           required
-  //           spellCheck="false"
-  //           onChange={(e) => {
-  //             hanldeInputChange(e);
-  //           }}
-  //         />
-  //          <button type="submit" className={styles.placeholder} value={name}>Buscar</button>   
-  //         {/* <span className={styles.placeholder}>Search</span> */}
-        
-  //     </form>
-  //   </div>
-  // );
-
 }

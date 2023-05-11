@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { validate } from "./validator.js";
-import { createPokemon } from "../../redux/action";
+import { createPokemon, getTypes } from "../../redux/action";
 import styles from "./PokemonCreate.module.css";
 
 
@@ -32,6 +32,10 @@ export default function PokemonCreate() {
     image: "",
     types: [],
   });
+
+  useEffect(() => {
+    dispatch(getTypes());
+ }, [dispatch]);
 
   const handleInputChange = (e) => {
     setInput({

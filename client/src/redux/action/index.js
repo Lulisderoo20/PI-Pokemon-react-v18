@@ -42,7 +42,7 @@ export function getNamePokemon(name){
                 type: 'GET_BY_NAME',
                 payload: arr 
             });
-        }catch{
+        }catch(error){
             console.log('Pokemon Not Found');
             alert('Pokemon Not Found');
         };
@@ -102,5 +102,12 @@ export function createPokemon(pokenuevo){
 export function cleanMyStore(){
     return{
         type: 'CLEAN_STORE',
+    }
+}
+
+
+export function setPage(){
+    return{
+        type: 'SET_PAGE',
     }
 }

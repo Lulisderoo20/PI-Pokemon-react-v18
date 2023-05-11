@@ -1,5 +1,5 @@
 body {
-    
+  
   background-attachment: fixed;
   background-size: cover;
 }
@@ -30,6 +30,7 @@ body {
   margin-bottom: 10%;
   margin-top: 20px;
   animation: fadeinupbig 1s forwards ease;
+  min-height: 100vh;
   
 }
 

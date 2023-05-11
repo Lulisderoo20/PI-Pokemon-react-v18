@@ -83,3 +83,45 @@ background-color: rgb(32, 37, 109);
     transform: rotate(-5deg)
   }  
 }
+
+.about{
+    height: 100vb;
+    background: #d8a536;
+    display: flex;
+
+}
+.arrow{
+  color: rgb(26, 37, 189);
+  cursor: pointer;
+  margin-right: 3%;
+  margin-left: 70%;
+  font-size: 250%;
+  opacity: 0;
+  
+}
+
+
+@keyframes arrow {
+  0% {
+    opacity: 0; /* El elemento está oculto al inicio */
+  }
+  5% {
+    opacity: 100; /* El elemento aparece completamente al final de la animación */
+  }
+  100% {
+    opacity: 100; /* El elemento aparece completamente al final de la animación */
+  }
+}
+.yo{  height: 100vb;
+}
+.arrow {
+  animation-name: arrow;
+  animation-duration: 2s; /* Duración total de la animación */
+  animation-delay: 2s; /* Retraso de 2 segundos antes de que la animación comience */
+  animation-fill-mode: forwards; /* Mantiene el estilo del último keyframe después de la animación */
+  color: rgb(35, 45, 182);
+  cursor: pointer;
+  margin-right: 3%;
+  margin-left: 70%;
+  font-size: 250%;
+}

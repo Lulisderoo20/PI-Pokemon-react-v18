@@ -3,16 +3,24 @@ const initialState = {
   pokemonFiltered: [],
   pokemonDetail: [],
   types: [],
+  currentPage:1,
 };
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
+// case "SET_PAGE":
+//  return{
+  
+//  }
+
+
     case "GET_POKEMONS":
       return {
         ...state,
         pokemon: action.payload,
         pokemonFiltered: action.payload,
       };
+      
     case "GET_BY_NAME":
       if (!action.payload.length) {
         console.log('Pokemon not Found');
@@ -47,6 +55,7 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         pokemon: typeFiltered,
+        
       };
 
     case "FILTER_BY_STATE":
@@ -60,6 +69,7 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         pokemon: stateFiltered,
+       
       };
       
     case "ORDER_POKEMONS":
