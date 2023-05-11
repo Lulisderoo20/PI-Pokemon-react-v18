@@ -20,7 +20,7 @@
 const server = require('./src/app.js'); //en app esta express
 const { conn } = require('./src/db.js');//conn es sequelize xq se exporta asi en db
 require("dotenv").config();
-const { PORT } = process.env;
+const PORT = process.env.PORT || 3001;
 
 // Syncing all the models at once.//hace q se sincronicen los modelos en alter true y dsp escucha el puerto 3003
 conn.sync({ alter: true }).then(() => {//force true las recrea y borra los registros
