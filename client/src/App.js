@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Home from './components/Home/Home';
 import PokemonCreate from './components/PokemonCreate/PokemonCreate';
 import Detail from './components/Detail/Detail';
+import axios from axios;
 
 function App() {
   return (
