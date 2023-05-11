@@ -3,7 +3,7 @@ import axios from 'axios';
 export function getPokemons(){
     return async function(dispatch){
     try {
-        let response = await axios.get(`http://localhost:3003/pokemons`);
+        let response = await axios.get(`https://api-pokemon-lruf.onrender.com/pokemons`);
         // let arr= []; //tiene q estar en un array
         // arr.push(response.data)
         console.log(response.data);
@@ -20,7 +20,7 @@ export function getPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        let response = await axios.get(`http://localhost:3003/types`);
+        let response = await axios.get(`https://api-pokemon-lruf.onrender.com/types`);
         return dispatch({
             type: 'GET_TYPES',
             payload: response.data
@@ -33,7 +33,7 @@ export function getTypes(){
 export function getNamePokemon(name){
     return async function(dispatch){
         try{
-            let response = await axios.get(`http://localhost:3003/pokemons?name=${name}`);
+            let response = await axios.get(`https://api-pokemon-lruf.onrender.com/pokemons?name=${name}`);
             // console.log(response.data);
             let arr= []; //tiene q estar en un array
             arr.push(response.data)
@@ -52,7 +52,7 @@ export function getNamePokemon(name){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            let json = await axios.get('http://localhost:3003/pokemons/' + id);
+            let json = await axios.get('https://api-pokemon-lruf.onrender.com/pokemons/' + id);
             return dispatch({
                 type: 'GET_DETAIL',
                 payload: json.data
@@ -88,7 +88,7 @@ export function filterByState(payload){
 export function createPokemon(pokenuevo){
     return async function(dispatch){
         try {
-            var response = await axios.post(`http://localhost:3003/pokemons`, pokenuevo);//pokenuevo seria el req.body de mi controller
+            var response = await axios.post(`https://api-pokemon-lruf.onrender.com/pokemons`, pokenuevo);//pokenuevo seria el req.body de mi controller
             return console.log('pokemon created por redux')//dispatch({type: 'ADD_POKEMON', payload: response.data}); //en realidad no necesito este type porque mis pokemons se renderizan directamente desde mi base de datos.    
             //porq no m funciona este console.log()?
         } catch (error) {
