@@ -1,158 +1,230 @@
-body{
-    background-color: #191a1d;
+body {
+  background-color: #191a1d;
+  height: 100%;
+  width: 100%;
 }
-.bodyDetail{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.bodyDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    
-    background-color:#191a1d ;
-    height: auto
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+
+  background-color: #191a1d;
+  height: auto;
 }
 .button {
-    height: 45px;
-    padding: 1.3em 3em;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #fff;
-    background-color: #191a1d;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+  height: 45px;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #191a1d;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
 .button:hover {
-    background-color: #f0c305;
-    box-shadow: 0px 15px 20px rgb(231, 196, 37);
-    color: #000;
-    transform: translateY(-7px);
+  background-color: #f0c305;
+  box-shadow: 0px 15px 20px rgb(231, 196, 37);
+  color: #000;
+  transform: translateY(-7px);
 }
 
 .button:active {
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
-.cardDetail{
-    display: block;
-    height: 580px;
-    width: 900px;
-    background-image: url('../../assets/detail.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 90%;
-    margin-top: -1%;
-    
+.original {
+  display: block;
+  height: 580px;
+  width: 900px;
+  background-image: url("../../assets/PokedexOriginal.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 90%;
+  margin-top: -1%;
+  animation: cartel 1s 1;
+  transform-origin: top center;
 }
 
-.cardDetailDos{
-    display: block;
-    height: 580px;
-    width: 900px;
-    background-image: url('../../assets/PokedexVerde.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 90%;
-    margin-top: -1%;
-    
+.verde {
+  display: block;
+  height: 580px;
+  width: 900px;
+  background-image: url("../../assets/PokedexVerde.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 90%;
+  margin-top: -1%;
+  animation: cartel 1s 1;
+  transform-origin: top center;
 }
 
+.naranja {
+  display: block;
+  height: 580px;
+  width: 900px;
+  background-image: url("../../assets/PokedexNaranja3.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 90%;
+  margin-top: -1%;
+  animation: cartel 1s 1;
+  transform-origin: top center;
+}
+
+@keyframes cartel {
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+}
+
+.centrar {
+    animation-name: none;
+  cursor: pointer;
+  margin: 1%;
+  animation: computerFlashAnimation 0.5s linear;
+}
+.centrar:hover {
+    animation-name: none;
+  cursor: pointer;
+  margin: 1%;
+  animation: computerFlashAnimation 0.5s linear;
+}
+
+.centrar:active {
+    animation-name: none;
+  cursor: pointer;
+  margin: 1%;
+  animation: computerFlashAnimation 0.5s linear;
+}
+
+@keyframes flash {
+    0% {
+        background-color: black;
+      }
+      50% {
+        background-color: white;
+      }
+      100% {
+        background-color: black;
+      }
+}
 
 button.roundButton {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 10%;
+  height: 15%;
   background-color: green;
   border: none;
   cursor: pointer;
+  margin-right: 73%;
+  margin-bottom: 0;
+  margin-top: 1%;
+  animation: flash 0.5s 1;
 }
 
-
-.imagePokemon{
-    position: absolute;
-    padding-top: 140px;
-    padding-left: 157.5px;
-    transform: scale(1);
-}
-.name{
-    position: absolute;
-    padding-top: 475px;
-    padding-left: 165px;
-    font-size: 80%;
-    /* justify-content: center; */
-    /* outline:auto */
-
-}
-.height{
-    position: absolute;
-    padding-top: 465px;
-    padding-left: 530px;
-    color: #fff;
-}
-.weight{
-    position: absolute;
-    padding-top: 465px;
-    padding-left: 670px;
-    color: #fff;
-}
-.id{
-    position: absolute;
-    width: 230px;
-    padding-top: 161px;
-    padding-left: 532px;
-    color: #fff;
-}
-.hp{
-    position: absolute;
-    padding-top: 405px;
-    padding-left: 550px;
-    color: #fff;
-}
-.attack{
-    position: absolute;
-    padding-top: 250px;
-    padding-left: 532px;
-    color: #fff;
-}
-.defense{
-    position: absolute;
-    padding-top: 250px;
-    padding-left: 610px;
-    color: #fff;
-}
-.speed{
-    position: absolute;
-    padding-top: 250px;
-    padding-left: 700px;
-    color: #fff;
-}
-.type{
-    position: absolute;
-    padding-top: 210px;
-    padding-left: 532px;
-    color: #fff;
-}
-.types{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding-top: 210px;
-    padding-left: 594px;
-    color: #fff;
+.imagePokemon {
+  position: absolute;
+  padding-top: 3%;
+  padding-left: 9.85%;
+  transform: scale(1.05);
 }
 
-.loadingPokemons{
-    width: 25%;
-    height: 25%;
+.name {
+  position: absolute;
+  padding-top: 28.8%;
+  padding-left: 10.5%;
+  font-size: 80%;
+  /* justify-content: center; */
+  /* outline:auto */
+  color: #000;
+}
+.height {
+  position: absolute;
+  padding-top: 28%;
+  padding-left: 39.6%;
+  color: #fff;
+}
+
+.weight {
+  position: absolute;
+  padding-top: 28%;
+  padding-left: 50.5%;
+  color: #fff;
+}
+
+.id {
+  position: absolute;
+  width: 230px;
+  padding-top: 4.6%;
+  padding-left: 532px;
+  color: #fff;
+}
+
+.hp {
+  position: absolute;
+  padding-top: 23.4%;
+  padding-left: 39.5%;
+  color: #fff;
+}
+
+.attack {
+  position: absolute;
+  padding-top: 10%;
+  padding-left: 40%;
+  color: #fff;
+}
+
+.defense {
+  position: absolute;
+  padding-top: 10%;
+  padding-left: 45.5%;
+  color: #fff;
+}
+.speed {
+  position: absolute;
+  padding-top: 10%;
+  padding-left: 700px;
+  color: #fff;
+}
+.type {
+  position: absolute;
+  padding-top: 8%;
+  padding-left: 41%;
+  color: #fff;
+}
+.types {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 12%;
+  padding-left: 69%;
+  color: #fff;
+}
+
+.loadingPokemons {
+  width: 25%;
+  height: 25%;
 }

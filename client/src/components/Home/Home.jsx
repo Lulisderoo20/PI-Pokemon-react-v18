@@ -6,7 +6,7 @@ import Card from "../Card/Card";//2
 import Paginated from "../Paginated/Paginated";//3
 import SearchBar from "../SearchBar/SearchBar";//1
 import styles from "./Home.module.css";
-import image from "../../assets/loading.gif"
+import image from "../../assets/pikachu-running.gif";
 
 export default function Home(){
     const dispatch = useDispatch();

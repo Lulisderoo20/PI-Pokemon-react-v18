@@ -12,6 +12,8 @@
   background-size: cover;
   text-align: center;
   position: relative;
+  padding-top: 5.5%;
+ 
   
 }
 
@@ -19,8 +21,10 @@
   height: 50%;
   cursor: pointer;
   animation: bounce 300ms alternate 6  cubic-bezier(0.2, 0.65, 0.6, 1) ;
-  margin-top: -25%;
+  margin-top: -35%;
   margin-left: -3%;
+  
+  
 }
 
 @keyframes bounce {
@@ -39,10 +43,10 @@
   letter-spacing: 2.5px;
   font-weight: 500;
   color: #f0e111;
-  background-color: #304572;
+
   /* border:#ffffff; */
   border-radius: 45px;
-  box-shadow: 50px 8px 15px 2px rgba(0, 0, 0, 0.1);
+background-color: rgb(32, 37, 109);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
@@ -50,6 +54,8 @@
   animation: cartel 1s 1;
   animation-delay: 1s;
   transform-origin: top center;
+  margin-left: -4.3%;
+  margin-top: -4%
 }
 
 .button:hover {

@@ -145,6 +145,7 @@ body {
 .loadingPokemons {
   width: 25%;
   height: 25%;
+  margin: 40%
 }
 
 /* @media screen and (max-width: 600px){

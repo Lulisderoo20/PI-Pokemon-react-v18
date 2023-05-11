@@ -1,3 +1,28 @@
+/* body{
+    background-image: url("../../assets/pika.gif");
+} */
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    color: rgb(231, 196, 37);
+    margin-left: 1%;
+    
+    
+  }
+  h3{
+    margin-bottom: 6%;
+    margin-top: 1%;
+ 
+  }
+  
+  h1:hover{animation: aparecer 2s infinite step-end}
+
+  /* 
 .nav{
     display: flex;
     flex-direction: row;
@@ -5,10 +30,13 @@
     justify-content: space-around;
     background-color: #191a1d;
     color: #ffffffec;
-   
-}
+
+} */
 
 h1 { animation: aparecer 1s ease-in 1;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    
 	}
 
 .statsAndTypes{
@@ -16,7 +44,7 @@ h1 { animation: aparecer 1s ease-in 1;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-block: 20px;
+    color: rgb(231, 196, 37);
 }
 
 .stats{
@@ -28,6 +56,7 @@ h1 { animation: aparecer 1s ease-in 1;
     width: 400px;
     background-color: #393d4446;
     border-radius: 10px;
+    padding-bottom: 2%;
 }
 
 @keyframes aparecer {
@@ -43,14 +72,21 @@ h1 { animation: aparecer 1s ease-in 1;
 }
 
 .types{
-    height: 250px;
-    background-color: #fff;
+    height: 100%;
+    background-color: #393d4446;
     border-radius: 10px;
+    /* border: 1px solid green; */
+    margin-left: -15%;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-bottom: 4%;
+    padding-top: 1%;
 }
 
 .typesOrder{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 }
 
 /* Buttons */
@@ -62,16 +98,16 @@ h1 { animation: aparecer 1s ease-in 1;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    color: #000;
-    background-color: #fff;
+    color: #dba643;
+    background-color: #1d1f24;
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-    animation: aparecer 1s ease-in 1;
-    animation-delay: 1s;
+    animation: aparecer 2s ease-in 1;
+    animation-delay: 3s;
 }
 
 .button:hover {
@@ -94,21 +130,23 @@ div.centralize {
 }
 div.inputBlock {
 	position: relative;
+  
 }
 div.inputBlock input {
 	font-weight: 500;
-	color: #adadad;
 	width: 250px;
 	height: 1px;
 	padding: 15px 15px;
 	border-radius: 1rem;
 	border: 0.01rem solid  #adadad;
+      background-color: #4e4c4c;
+    color:#24211d
 }
 div.inputBlock span.placeholder {
 	position: absolute;
 	margin: 5px 0;
 	padding: 0 5px;
-	color:  #adadad;
+	color:  #b4b2b2;
 	display: flex;
 	align-items: center;
 	top: 0;
@@ -120,11 +158,11 @@ div.inputBlock span.placeholder {
 div.inputBlock input:valid + span.placeholder,
 div.inputBlock input:focus + span.placeholder {
 transform: scale(0.8) translateY(-30px);
-background: #fff;
+background: #2c2c2c;
 }
 div.inputBlock input:focus{
 color: #f0c305;
-border-color: #f0c305;
+border-color: #000;
 }
 div.inputBlock input:focus + span.placeholder {
 color: #f0c305;
@@ -135,19 +173,25 @@ color: #f0c305;
 .container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
+    margin-bottom: 10%;
+  
 }
+
 ul{
     margin-block-start: 20px;
     margin-block-end: 1px;
     padding-inline-start: 1px;
+
 }
 ul.ksCboxtags li{
     display: inline;
+  
+    
 }
 ul.ksCboxtags li label{
-    background-color: rgba(255, 255, 255, .9);
+    background-color: #1d1f24;
     border: 2px solid rgba(139, 139, 139, .3);
-    color: #adadad;
+    color: #a3a3a2;
     border-radius: 25px;
     white-space: nowrap;
     -webkit-touch-callout: none;
@@ -158,6 +202,19 @@ ul.ksCboxtags li label{
     -webkit-tap-highlight-color: transparent;
     transition: all .2s;
 }
+
+ul.ksCboxtags li label:hover {
+    background-color: #f0c305;
+    box-shadow: 100% #fff;
+    color: #000;
+    transform: translateY(-7px);
+    animation: aparecer 50s 200 linear
+  }
+  
+  ul.ksCboxtags li label:active {
+    transform: translateY(-1px);
+  }
+
 ul.ksCboxtags li label {
     padding: 8px 12px;
     cursor: pointer;
