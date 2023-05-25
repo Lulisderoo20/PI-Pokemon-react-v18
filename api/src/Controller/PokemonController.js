@@ -171,7 +171,7 @@ const createPokemon = async (req, res) => {
       where: { name: name.toLowerCase() },//ver esto de lowerCase
     });//Solo se fija si existe entre los creados
     if (findPokemon) {
-      res.send("Pokemon already exists");
+      res.status(400).send("Pokemon already exists");
     } else {
       let newPokemon = await Pokemon.create({
         name: name.toLowerCase(),
@@ -189,11 +189,10 @@ const createPokemon = async (req, res) => {
         },
       });
       await newPokemon.addTypes(pokemonType);
-      res.status(200)//esto hace falta? , no me hizo falta pero en un momento me salio  , no creo pokemon porque no quiero xD
+      res.status(200).send("Pokemon Created")//, no me hizo falta pero en un momento me salio  , no creo pokemon porque no quiero xD
       //.json(newPokemon); // esto no hace falta por eso lo comento 
 
       // await newPokemon.setTypes(pokemonType);
-      // res.send("Pokemon Created");
     }
   } catch (error) {
     console.log(error);

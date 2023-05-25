@@ -6,7 +6,7 @@ import PokemonCreate from './components/PokemonCreate/PokemonCreate';
 import Detail from './components/Detail/Detail';
 // import axios from "axios";
 
-//  axios.defaults.baseURL = "https://api-pokemon-lruf.onrender.com";
+//  axios.defaults.baseURL = "https://api-pokemon-lruf.onrender.com"; 
 
 function App() {
   return (

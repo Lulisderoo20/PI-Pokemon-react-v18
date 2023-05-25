@@ -11,7 +11,6 @@ import image from "../../assets/pikachu-running.gif";
 export default function Home(){
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemon);
-    // const currentPag = useSelector((state) => state.currentPage);
     const allTypes = useSelector((state) => state.types)
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonPerPage] = useState(12);
@@ -21,7 +20,6 @@ export default function Home(){
     const [order, setOrder] = useState('');
 
     const paginated = (pageNumber) => {
-        // dispatch()
         setCurrentPage(pageNumber);
     };
 
@@ -32,11 +30,6 @@ export default function Home(){
 
     };
 
-    // useEffect(() => {
-    //     setCurrentPage(1);
-    // }, [setCurrentPage]);
-
-   
     useEffect(() => {
        rechargePokemon();
 

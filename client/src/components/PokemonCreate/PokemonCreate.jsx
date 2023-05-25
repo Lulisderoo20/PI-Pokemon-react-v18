@@ -53,6 +53,7 @@ export default function PokemonCreate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     if (types.length > 2) {
       return alert("Choose only two types");
     }
@@ -62,6 +63,7 @@ export default function PokemonCreate() {
     if (!types.length) {
       alert("Select a Type");
     } else {
+      
       dispatch(createPokemon(input));
 
       setInput({
@@ -78,6 +80,7 @@ export default function PokemonCreate() {
 
       setTypes([]);
       e.target.reset();
+//if
       alert("Pokemon created!");
     }
   };
@@ -87,12 +90,6 @@ export default function PokemonCreate() {
       setTypes([...types, e.target.value]);
       setInput({ ...input, types: [...types, e.target.value] });
     }
-
-
-    // }else{
-    //     let pos = types.indexOf(e.target.id);
-    //     types.splice(pos, 1);
-    // };
 
     
   };

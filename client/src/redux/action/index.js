@@ -93,6 +93,7 @@ export function createPokemon(pokenuevo){
             return console.log('pokemon created por redux')//dispatch({type: 'ADD_POKEMON', payload: response.data}); //en realidad no necesito este type porque mis pokemons se renderizan directamente desde mi base de datos.    
             //porq no m funciona este console.log()?
         } catch (error) {
+            console.log(error.message);
             alert('no creo pokemon porq no quiero')
         }
        
