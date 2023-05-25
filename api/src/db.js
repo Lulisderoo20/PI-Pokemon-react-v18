@@ -1,7 +1,7 @@
 //aca comente todo porq en el principio no sabia nada de que hacia cada cosa xD
 
 require("dotenv").config();
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY } = process.env;
+const {  DB_DEPLOY } = process.env;
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
