@@ -6,7 +6,7 @@ export function getPokemons(){
         let response = await axios.get(`/pokemons`);
         // let arr= []; //tiene q estar en un array
         // arr.push(response.data)
-        console.log(response.data);
+        // console.log(response.data);
         return dispatch({
             type: 'GET_POKEMONS',
             payload: response.data//response objeto {[]}, data []
