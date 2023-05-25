@@ -18,14 +18,11 @@ const path = require("path");
 //     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 //   }
 // );
+
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
-// const sequelize = new Sequelize(DB_DEPLOY, {
-//   logging: false, // set to console.log to see the raw SQL queries
-//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-// });
 
 
 const basename = path.basename(__filename); //path tiene metodos, basename devuelve el ultimo segmento de una ruta, filename devuelve toda la ruta. del directorio incluyendo el archivo a diferencia de __dirname que solo devuelve el directorio, (la ruta sin el archivo)
