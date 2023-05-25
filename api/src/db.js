@@ -7,17 +7,21 @@ const fs = require("fs");
 const path = require("path");
 
 //---comente esto para render---
-const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
-  {
-    //opciones de configuracion
-    //logging -> console.log
-    logging: false, // set to console.log to see the raw SQL queries para depuracion
-    //native -> viene en false por defecto en realidad. preguntar si me conviene ponerlo en true y si hay que configurar algo mas para q funcione y no me rompa nada.
-    native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-  }
-);
-
+// const sequelize = new Sequelize(
+//   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
+  
+//   {
+//     //opciones de configuracion
+//     //logging -> console.log
+//     logging: false, // set to console.log to see the raw SQL queries para depuracion
+//     //native -> viene en false por defecto en realidad. preguntar si me conviene ponerlo en true y si hay que configurar algo mas para q funcione y no me rompa nada.
+//     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+//   }
+// );
+const sequelize = new Sequelize(DB_DEPLOY, {
+  logging: false, // set to console.log to see the raw SQL queries
+  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+});
 // const sequelize = new Sequelize(DB_DEPLOY, {
 //   logging: false, // set to console.log to see the raw SQL queries
 //   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
